@@ -12,6 +12,6 @@ extend type Query {
 
 extend type Mutation {
 
-    createPost(title: String!, content: String!): Post!
+    createPost(title: String!, content: String!, authorId: String!): Post!
 
 }

@@ -17,9 +17,9 @@ public class Mutation implements GraphQLMutationResolver {
 
     @Autowired private AuthorRepository authorRepository;
 
-    public Post createPost(String title, String content) {
+    public Post createPost(String title, String content, Long authorId) {
 
-        Author author = authorRepository.findById(1L).get();
+        Author author = authorRepository.findById(authorId).get();
 
         Post post = new Post();
         post.setTitle(title);
