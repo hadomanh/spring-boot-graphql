@@ -1,0 +1,17 @@
+type Author {
+    id: ID!
+    name: String!
+    posts: [Post]!
+}
+
+extend type Query {
+
+    authors: [Author]!
+    
+}
+
+extend type Mutation {
+
+    createAuthor(name: String!): Author!
+
+}
